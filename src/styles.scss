@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+@mixin dflex($jc: center, $ai: center, $fd: row) {
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+/* edu-vic-wa-nt-beginner-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Edu VIC WA NT Beginner';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/edu-vic-wa-nt-beginner-v4-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* edu-vic-wa-nt-beginner-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Edu VIC WA NT Beginner';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/edu-vic-wa-nt-beginner-v4-latin-500.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* edu-vic-wa-nt-beginner-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Edu VIC WA NT Beginner';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/edu-vic-wa-nt-beginner-v4-latin-600.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* edu-vic-wa-nt-beginner-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Edu VIC WA NT Beginner';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/edu-vic-wa-nt-beginner-v4-latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

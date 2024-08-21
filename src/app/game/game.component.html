@@ -1,0 +1,29 @@
+
+
+<section>
+    <div class="card-stack">
+        @for (index of [0,1,2,3]; track $index) {
+            <img [ngStyle]="{'left.px': index * 4}" src="/assets/img/cards/card_cover.png" alt="">
+        }
+        <img (click)="takeCard()" class="first-card" [ngStyle]="{'left.px': 4 * 4}"
+        src="/assets/img/cards/card_cover.png" alt="">
+        @for (card of firebaseService.playedCards; track $index) {
+            <img class="played-card" [ngStyle]="{'left.px': 4 * 4}" src="/assets/img/cards/{{ card }}.png" alt="">
+        }
+        @if (takeCardAnimation) {
+            <img class="take-card" [ngStyle]="{'left.px': 4 * 4}" src="/assets/img/cards/{{ currentCard }}.png" alt="">
+        }
+        
+    </div>
+</section>
+
+<div class="players-div">
+    @for (player of firebaseService.players; track $index) {
+    <app-player [ngStyle]="{'top.px': 40 + ($index * 140)}" [name]="player" [playerActive]="$index == firebaseService.currentPlayer"></app-player>
+    }
+    <button (click)="openDialog()" mat-fab>
+        <mat-icon>add</mat-icon>
+    </button>
+</div>
+
+<app-to-do-info [card]="currentCard" class="to-do-card"></app-to-do-info>

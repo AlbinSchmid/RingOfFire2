@@ -1,0 +1,67 @@
+@import './../../styles.scss';
+
+section {
+    background-image: url('./../../assets/img/background.jpg');
+    width: 100vw;
+    height: 100vh;
+    @include dflex();
+}
+
+.card-stack {
+    position: relative;
+    @include dflex();
+
+    >img {
+        position: absolute;
+        width: 120px;
+    }
+}
+
+.first-card {
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+.take-card {
+    animation: take-card-animation 1s ease-in-out;
+    transform: scale(1) translateX(170px) translateY(-100px) rotate(-20deg); // so ist die Karte positioniert wenn die Animation fertig ist.
+}
+
+@keyframes take-card-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.7);
+    }
+
+    100% {
+        transform: scale(1) translateX(170px) translateY(-100px) rotate(-20deg),
+    }
+}
+
+.played-card {
+    transform: scale(1) translateX(170px) translateY(-100px) rotate(-20deg);
+}
+
+.players-div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include dflex($fd: column);
+    gap: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+}
+
+.to-do-card {
+    position: absolute;
+    bottom: 32px;
+    right: 200px;
+    left: 200px;
+}
