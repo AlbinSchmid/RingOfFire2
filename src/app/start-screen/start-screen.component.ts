@@ -10,7 +10,5 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrl: './start-screen.component.scss'
 })
 export class StartScreenComponent {
-
-
   constructor(public firebaseService: FirebaseService) { }
 }

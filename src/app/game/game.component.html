@@ -10,8 +10,8 @@
         @for (card of firebaseService.playedCards; track $index) {
             <img class="played-card" [ngStyle]="{'left.px': 4 * 4}" src="/assets/img/cards/{{ card }}.png" alt="">
         }
-        @if (takeCardAnimation) {
-            <img class="take-card" [ngStyle]="{'left.px': 4 * 4}" src="/assets/img/cards/{{ currentCard }}.png" alt="">
+        @if (firebaseService.takeCardAnimation) {
+            <img class="take-card" [ngStyle]="{'left.px': 4 * 4}" src="/assets/img/cards/{{ firebaseService.currentCard }}.png" alt="">
         }
         
     </div>
@@ -26,4 +26,4 @@
     </button>
 </div>
 
-<app-to-do-info [card]="currentCard" class="to-do-card"></app-to-do-info>
+<app-to-do-info [card]="firebaseService.currentCard" class="to-do-card"></app-to-do-info>
